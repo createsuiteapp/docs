@@ -7,7 +7,7 @@ export default defineConfig({
     starlight({
       title: "CreateSuite Docs",
       description: "Documentação e ajuda da plataforma CreateSuite",
-      defaultLocale: "pt-BR",
+      defaultLocale: "root",
       locales: {
         root: { label: "Português", lang: "pt-BR" },
       },
@@ -22,18 +22,11 @@ export default defineConfig({
       sidebar: [
         {
           label: "Primeiros Passos",
-          items: [
-            { label: "Introdução", slug: "intro" },
-            { label: "Criando sua conta", slug: "getting-started/account" },
-          ],
+          autogenerate: { directory: "getting-started" },
         },
         {
           label: "Landing Pages",
-          items: [
-            { label: "Visão geral", slug: "landing-pages/overview" },
-            { label: "Editor", slug: "landing-pages/editor" },
-            { label: "Publicando", slug: "landing-pages/publishing" },
-          ],
+          autogenerate: { directory: "landing-pages" },
         },
         {
           label: "FAQ",
